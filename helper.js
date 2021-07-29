@@ -94,7 +94,6 @@ drawText("25", [12, 12.25, 0],0.5);
 
 function animate() {
     requestAnimationFrame(animate);
-    // xyAxis.rotation.z += 0.01;
     document.getElementById('inputDiv').style.height = window.innerHeight.toString() + 'px';
     camera.aspect = window.innerWidth / window.innerHeight;     //update aspect ratio in case window is resized
     renderer.setSize(0.75*window.innerWidth, 0.75*window.innerHeight);  //update renderer size in case window resize
@@ -114,7 +113,6 @@ function addVectorInput() {
     input.id = String(i);
     console.log("added input with id " + input.id)
     input.className = "form-control";
-    // input.addEventListener("input",alert(input.id));
     
     inputDiv.appendChild(input);
     input.addEventListener("input",function(e) {checkForValidInput(input.id);});
@@ -123,7 +121,6 @@ function addVectorInput() {
 
 function removeVectorInput() {
     i--;
-    // var inputDiv = document.getElementById("inputDiv");
     document.getElementById(String(i)).remove();
     if (scene.getObjectByName(String(i)) != null) {
         removeArrow(String(i));
@@ -132,12 +129,8 @@ function removeVectorInput() {
 }
 
 function checkForValidInput(id) {
-    // try {
     let vectInput = document.getElementById(id).value;
-    // }
-    // catch (error) {
-    //     console.log(error);
-    // }
+    
     
     if (scene.getObjectByName(id) != null) {
         removeArrow(id);
@@ -154,27 +147,5 @@ function checkForValidInput(id) {
 
     }
     
-
-    //check if vector already exists on scene
-    // if (scene.getObjectByName(id) != null) {
-    //     console.log("exists");
-    // }
-
-    // check if input starts with '(' and ends with ')'
-    // if (vectInput[0] == "(" && vectInput[vectInput["length"] - 1] == ")" && hasOnlyUniqueCharacters(vectInput) == true) {
-    //     let arrOfInts = vectInput.slice(1,vectInput["length"] - 1).split(",");
-    //     arrOfInts = arrOfInts.map(function (x) { 
-    //         return parseInt(x, 10); 
-    //       });
-        
-    //     if (arrOfInts.length == 3) {
-    //         console.log(arrOfInts);
-    //         //pass our elements into our function that adds the arrow to the scene and use a random colour
-    //         addArrow(...arrOfInts, '#' + Math.random().toString(16).substr(-6));
-    //     }
-    // }
-    // else {
-    //     removeArrow(id);
-    // }
 }
 

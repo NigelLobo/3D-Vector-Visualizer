@@ -66,14 +66,58 @@
     
     
 
-    <nav class="navbar navbar-dark " style="background-color: #202020;">
+    <!-- <nav class="navbar navbar-dark " style="background-color: #202020;">
         <div class="container-fluid">
           <a class="navbar-brand" href='https://github.com/NigelLobo' title="Back To Github">
             <img src="imgs/GitHub-Mark-64px.png" alt="Github Profile" width="30" height="30" class="d-inline-block align-text-top">
             3D Vector Visualizer
           </a>
         </div>
-      </nav>
+      </nav> -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">3D Vector Visualizer</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://github.com/NigelLobo">My Github</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/NigelLobo/3D-Vector-Visualizer">About the Project</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Controls</a>
+              </li>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Controls</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Add vectors in the input boxes on the left.<br><br>
+                      Hover the mouse and scroll to zoom in and out of the 3D graph. <br><br>
+                      Click and drag the mouse over the scene to rotate the 3D graph.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>  
 
     <div width="75%" height="75%" id="canvas"></div>
 
@@ -91,7 +135,7 @@
 
         <input type="text" class="form-control" id="0" placeholder="(10,10,10)" oninput="checkForValidInput('0')">
         <input type="text" class="form-control" id="1" placeholder="(4,5,6)" oninput="checkForValidInput('1')">    
-  
+        
     </div>
 
     <script src="\three.js-master\build\three.js"></script>
