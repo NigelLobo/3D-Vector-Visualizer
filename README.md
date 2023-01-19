@@ -14,3 +14,6 @@ This project is a mathematical visualization tool that allows users to enter vec
 <b>Javascript</b> is used within Django and to calculate distances between sets of latitude and longitude coordinates. 
 
 <b>HTML, CSS, Bootstrap</b> are all used to create, rearrange and improve the overall aesthetics of the web application. 
+
+
+<sub>Completed April 2021</sub>
